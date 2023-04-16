@@ -109,7 +109,7 @@ class ISIC(Dataset):
 if __name__ == '__main__':
     # Small test
     from Transforms import Augmenter
-    path = '/well/rittscher/users/jyo949/data/ISIC2018/mult_Anno/'
+    path = 'YOUR_PATH'
     transforms = Augmenter(['rotate', 'flip', 'gaussian_noise'])
 
     data = ISIC(path, transforms)

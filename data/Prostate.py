@@ -92,7 +92,7 @@ if __name__ == '__main__':
     # Small test
     from Transforms import Augmenter
     from myutils.plotting import img_plot
-    path = '/well/rittscher/users/jyo949/data/QUBIQ/prostate/train'
+    path = 'YOUR_PATH'
     transforms = Augmenter(['rotate', 'flip', 'gaussian_noise'])
 
     data = Prostate(path, transforms)

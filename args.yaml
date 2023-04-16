@@ -1,4 +1,4 @@
---- # Set up and logging parameter
+# Set up and logging parameter
 run_name: "Debug"
 description: 'Run to use Multiannotator data for semi-supervision'
 comment: ""
@@ -8,7 +8,7 @@ log_results: True
 save_model: True
 ask_for_desc: True
 log_interval: 50  # Logging interval for Summary writer
-path_output: '/well/rittscher/users/jyo949/MultiSSL/output/'
+path_output: 'YOUR_PATH'
 proto_interval: 1
 seed: 123456
 
@@ -18,7 +18,7 @@ model_name: 'EnsembleNetwork'
 l2_reg: 1e-5
 model_path: null
 input_channels: 1
-ensemblePath: '/well/rittscher/users/jyo949/MultiSSL/Experiments_Prostate/Ensemble/train_Ensemble/output/'
+ensemblePath: 'YOUR_PATH'
 
 # Training parameter
 n_iterations: 12000 # 1750 # 3350
@@ -43,20 +43,20 @@ psi: [0.025,0.025]
 ## Data parameter
 dataset : 'Prostate'
 debug_n_samples: 1e9
-path_super: '/well/rittscher/users/jyo949/data/QUBIQ/prostate/train/'
-path_val :  '/well/rittscher/users/jyo949/data/QUBIQ/prostate/val/'
-path_test:  '/well/rittscher/users/jyo949/data/QUBIQ/prostate/test/'
+path_super: 'YOUR_PATH'
+path_val :  'YOUR_PATH'
+path_test:  'YOUR_PATH'
 
 ## Data parameter
 #dataset : 'LIDC'
 #debug_n_samples: 1e9
-#path_super: '/well/rittscher/users/jyo949/data/LIDC/train/'
-#path_val :  '/well/rittscher/users/jyo949/data/LIDC/val/'
-#path_test:  '/well/rittscher/users/jyo949/data/LIDC/test/'
+#path_super: 'YOUR_PATH'
+#path_val :  'YOUR_PATH'
+#path_test:  'YOUR_PATH'
 
 ## Data parameter
 #dataset : 'ISIC'
 #debug_n_samples: 1e9
-#path_super: '/well/rittscher/users/jyo949/data/ISIC2018/train/'
-#path_val :  '/well/rittscher/users/jyo949/data/ISIC2018/val/'
-#path_test:  '/well/rittscher/users/jyo949/data/ISIC2018/test/'
+#path_super: 'YOUR_PATH'
+#path_val :  'YOUR_PATH'
+#path_test:  'YOUR_PATH'
