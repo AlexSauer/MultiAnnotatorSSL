@@ -1,0 +1,9 @@
+*beforeSeptember*
+RescompState/*
+Experiments/*
+Experiments_LIDC/*
+Experiments_Prostate/*
+*.pyc
+*.ipynb
+.DS_Store
+._*

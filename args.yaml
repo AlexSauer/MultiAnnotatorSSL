@@ -1,0 +1,62 @@
+--- # Set up and logging parameter
+run_name: "Debug"
+description: 'Run to use Multiannotator data for semi-supervision'
+comment: ""
+debug: True  # Used in the Tracker to specifiy what stuff to track
+DEVICE_ID: 3
+log_results: True
+save_model: True
+ask_for_desc: True
+log_interval: 50  # Logging interval for Summary writer
+path_output: '/well/rittscher/users/jyo949/MultiSSL/output/'
+proto_interval: 1
+seed: 123456
+
+
+# Model parameter
+model_name: 'EnsembleNetwork'
+l2_reg: 1e-5
+model_path: null
+input_channels: 1
+ensemblePath: '/well/rittscher/users/jyo949/MultiSSL/Experiments_Prostate/Ensemble/train_Ensemble/output/'
+
+# Training parameter
+n_iterations: 12000 # 1750 # 3350
+early_stopping: 50  # In epochs
+batch_size: 4 # 16  #3 # 32 Need smaller one for geometric transformations
+lr: 1e-5
+sched_step: inf
+sched_gamma: 0.5
+
+# Transformation parameter
+transforms: []
+
+# Semi parameters
+percSuper: 0.1
+ignoreSemi: False
+iterationSemiBuildup: 3000  # This is a bit hard to set
+semiLambda: 1
+tau: [0.25,0.75]
+psi: [0.025,0.025]
+
+
+## Data parameter
+dataset : 'Prostate'
+debug_n_samples: 1e9
+path_super: '/well/rittscher/users/jyo949/data/QUBIQ/prostate/train/'
+path_val :  '/well/rittscher/users/jyo949/data/QUBIQ/prostate/val/'
+path_test:  '/well/rittscher/users/jyo949/data/QUBIQ/prostate/test/'
+
+## Data parameter
+#dataset : 'LIDC'
+#debug_n_samples: 1e9
+#path_super: '/well/rittscher/users/jyo949/data/LIDC/train/'
+#path_val :  '/well/rittscher/users/jyo949/data/LIDC/val/'
+#path_test:  '/well/rittscher/users/jyo949/data/LIDC/test/'
+
+## Data parameter
+#dataset : 'ISIC'
+#debug_n_samples: 1e9
+#path_super: '/well/rittscher/users/jyo949/data/ISIC2018/train/'
+#path_val :  '/well/rittscher/users/jyo949/data/ISIC2018/val/'
+#path_test:  '/well/rittscher/users/jyo949/data/ISIC2018/test/'
